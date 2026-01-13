@@ -1,0 +1,11 @@
+def twoNumbers(nums,target):
+    seen={}
+    for i ,num in enumerate(nums):
+        needed=target-num
+        if needed in seen:
+            return [seen[needed],i]
+        seen[num]=i
+print(twoNumbers([2,7,8,13],9))
+print(twoNumbers([3,3],6))
+print(twoNumbers([3,2,4],6))
+print(twoNumbers([10,40,13,25],65))
